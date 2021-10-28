@@ -10,9 +10,11 @@
 ### Description
 [Description of your app]
 
+Social iOS app that makes communication easier with other users regarding on the topic of movies.
+
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
+- **Category:** Social
 - **Mobile:**
 - **Story:**
 - **Market:**
