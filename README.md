@@ -48,18 +48,27 @@ Social iOS app that makes communication easier with other users regarding on the
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Account
+* Home
+* Search
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Account log in/sign up
+   * First screen launch.
+   * User Sign out.
+* Account Settings
+   * User presses Account Tab.
+* Home
+   * After user logs in
+   * User presses on Home Tab.
+   * User presses back button.
+* Search
+   * User presses on Search Tab.
+   * User presses the back button if the last screen was the search screen while the user is in the movie display screen.
+* Movie Display
+   * After the user searches for an item, User then click on the item.
+   * At the Home screen, the user presses any of the movies available. 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
