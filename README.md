@@ -8,7 +8,6 @@
 
 ## Overview
 ### Description
-[Description of your app]
 
 Social iOS app that makes communication easier with other users regarding on the topic of movies.
 
@@ -16,7 +15,7 @@ Social iOS app that makes communication easier with other users regarding on the
 [Evaluation of your app across the following attributes]
 - **Category:** Social
 - **Mobile:** Can be used on the go, and anywhere, the UI is simple and does not require much focus to use.
-- **Story:** 
+- **Story:** Connect and talk with your friends or around the world about movies. Watch movie trailers and comment about it with everyone!
 - **Market:** No in-app purchases
 - **Habit:** Multiple uses per day.
 - **Scope:** Movie watchers, Socialize
@@ -71,19 +70,19 @@ Social iOS app that makes communication easier with other users regarding on the
    * At the Home screen, the user presses any of the movies available. 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
+**Home**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Base%20Home%20App.drawio.png" width=150 height=200>
+**Home Alt**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Base%20Home%20App(Variant%202).drawio.png" width=150 height=200>
+**Movie**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Movie.drawio.png" width=150 height=200>
+**Movie Alt**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Movie(Variant%202).drawio.png" width=150 height=200>
+**Search**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Search.drawio.png" width=150 height=200>
+**Account Customization**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Acount%20Costumization.drawio.png" width=150 height=200>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 [This section will be completed in Unit 9]
