@@ -26,22 +26,32 @@ Social iOS app that makes communication easier with other users regarding on the
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+- [ ] User is able to create an account.
+- [ ] User is able to remain logged in across restarts.
+- [ ] User is able to view movies in an organized fashion.
+- [ ] User is able to search for desired movie.
+- [ ] User is able to add comments to movies.
+- [ ] User is able to watch movie trailer of chosen movie.
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+- [ ] User is able to add movies as favorite.
+- [ ] User is able to share favorite movies.
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Account Log In/ Sign Up Screen
+   * User is able to create an account.
+   * User is able to remain logged in across restarts.
+* Home Screen
+   * User is able to view movies in an organized fashion.
+   * User is able to search for desired movie [Search].
+   * User is able to add comments to movies.
+* Movie Display Screen
+   * User is able to watch movie trailer of chosen movie.
+* Favorites
+   * User is able to add movies as favorite.
+   * User is able to share favorite movies.
 
 ### 3. Navigation
 
