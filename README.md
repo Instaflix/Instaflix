@@ -87,24 +87,31 @@ Social iOS app that makes communication easier with other users regarding on the
 Home
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Base%20Home%20App.drawio.png" width=150 height=200>
+
 Home Alt
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Base%20Home%20App(Variant%202).drawio.png" width=150 height=200>
+
 Favorites
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Screen Shot 2021-11-01 at 1.51.51 PM.png" width=150 height=200>
+
 Movie
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Movie.drawio.png" width=150 height=200>
+
 Movie Alt
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Movie(Variant%202).drawio.png" width=150 height=200>
+
 Search
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Search.drawio.png" width=150 height=200>
+
 Account Customization
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Acount%20Costumization.drawio.png" width=150 height=200>
+
 Account Customization Alt
 
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Screen Shot 2021-11-01 at 1.37.03 PM.png" width=150 height=200>
