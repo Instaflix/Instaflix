@@ -15,11 +15,11 @@ Social iOS app that makes communication easier with other users regarding on the
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Social
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Mobile:** Can be used on the go, and anywhere, the UI is simple and does not require much focus to use.
+- **Story:** 
+- **Market:** No in-app purchases
+- **Habit:** Multiple uses per day.
+- **Scope:** Movie watchers, Socialize
 
 ## Product Spec
 
