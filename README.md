@@ -91,6 +91,9 @@ Social iOS app that makes communication easier with other users regarding on the
 **Account Customization Alt**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Screen Shot 2021-11-01 at 1.37.03 PM.png" width=150 height=200>
 
+HackMD Link:
+https://hackmd.io/@8y_u_aeZTP2uj_P7dsoqLA/r1WmhjpLF
+
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
