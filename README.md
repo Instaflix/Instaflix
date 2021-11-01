@@ -88,6 +88,8 @@ Social iOS app that makes communication easier with other users regarding on the
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Search.drawio.png" width=150 height=200>
 **Account Customization**
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Acount%20Costumization.drawio.png" width=150 height=200>
+**Account Customization Alt**
+<img src="https://github.com/Instaflix/Instaflix/blob/main/Wireframes/Screen Shot 2021-11-01 at 1.37.03 PM.png" width=150 height=200>
 
 ## Schema 
 [This section will be completed in Unit 9]
