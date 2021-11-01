@@ -26,32 +26,45 @@ Social iOS app that makes communication easier with other users regarding on the
 
 **Required Must-have Stories**
 
-- [ ] User is able to create an account.
-- [ ] User is able to remain logged in across restarts.
-- [ ] User is able to view movies in an organized fashion.
-- [ ] User is able to search for desired movie.
-- [ ] User is able to add comments to movies.
-- [ ] User is able to watch movie trailer of chosen movie.
+- [ ] As a user, I should be able to remain logged in across restarts.
+- [ ] As a new user, I should be able to create a new account for Instaflix.
+- [ ] As a user, I should be able to sign in into my account and view the home page.
+- [ ] As a user, I should be able to sign out from my account and return to the login page.
+- [ ] As a user, I should be able to view movies in an organized fashion.
+- [ ] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
+- [ ] As a user, I should be able to comment about the movies.
+- [ ] As a user, I should watch movie trailers of the chosen movie so I learn more about it.
+- [ ] As a developer, I want to store movie trailer data, movie poster data, movie title data, movie description data for the display movie screen.
+- [ ] As a developer, I want to link user accounts with comments displayed in the display movie screen.
+
 
 **Optional Nice-to-have Stories**
 
-- [ ] User is able to add movies as favorite.
-- [ ] User is able to share favorite movies.
+- [ ] As a user, I should be able to delete my account.
+- [ ] As a user, I should be able to add movies as favorite.
+- [ ] As a user, I should be able to share favorite movies.
+- [ ] As a user, I should be able to view their favorite movies.
+- [ ] As a user, I should be able to delete its own account.
+- [ ] As a user, I should be able to customize its own profile.
 
 ### 2. Screen Archetypes
 
 * Account Log In/ Sign Up Screen
-   * User is able to create an account.
-   * User is able to remain logged in across restarts.
+   * As a user, I should be able to create an account.
+   * As a user, I should be able to remain logged in across restarts.
+* Account Customization
+   * As a user, I should be able to delete my account.
+   * As a user, I should be able to customize my profile.   
 * Home Screen
-   * User is able to view movies in an organized fashion.
-   * User is able to search for desired movie [Search].
-   * User is able to add comments to movies.
+   * As a user, I should be able to view movies in an organized fashion.
+   * As a user, I should be able to search for desired movie [Search].
+   * As a user, I should be able to add comments to movies.
 * Movie Display Screen
-   * User is able to watch movie trailer of chosen movie.
+   * As a user, I should be able watch movie trailer of chosen movie.
+   * As a user, I should be able to comment about the movies.
 * Favorites
-   * User is able to add movies as favorite.
-   * User is able to share favorite movies.
+   * As a user, I should be able to add movies as favorite.
+   * As a user, I should be able to share favorite movies.
 
 ### 3. Navigation
 
