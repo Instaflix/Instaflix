@@ -62,6 +62,9 @@ Social iOS app that makes communication easier with other users regarding on the
    * After user logs in
    * User presses on Home Tab.
    * User presses back button.
+* Favorites
+   * User presses Favorites * on Home Screen
+   * User finishes sharing a Favorite
 * Search
    * User presses on Search Tab.
    * User presses the back button if the last screen was the search screen while the user is in the movie display screen.
