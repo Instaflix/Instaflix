@@ -135,13 +135,35 @@ https://hackmd.io/@8y_u_aeZTP2uj_P7dsoqLA/r1WmhjpLF
 ## Schema 
 ### Models
 
+Note: the ? in the name stands for nil/null properties. That it can be null.
+
 #### Posts
 | Property | Type | Description |
 | ---------- | ------ | -------------- |
 | objectId | String | self id of the object |
 | author | String | author of the post, must be an existing user |
-| image | File | Image added to the post |
+| image? | File | Image added to the post |
 | createdAt | DateTime | created time of the post |
+
+#### User
+| Property | Type | Description |
+| ---------- | ------ | -------------- |
+| objectId | String | self id of the object |
+| username | String | username of the user |
+| password | String | password of the user |
+| profilePicture? | File | an image of the user submitted profile picture |
+| profileDescription? | String | description of the profile of the user |
+| createdAt | DateTime | created time of the user |
+
+#### Movie
+| Property | Type | Description |
+| ---------- | ------ | -------------- |
+| objectId | String | self id of the object |
+| movieId | String | official api movie id |
+| moviePoster | String | official api movie poster link |
+| movieSypnosis | String | official api movie sypnosis link |
+| movieBackground | String | official api movie background link |
+| movieTrailer | String | official api movie trailer link |
 
 ### Networking
 - [Add list of network requests by screen ]
