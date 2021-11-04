@@ -137,7 +137,7 @@ https://hackmd.io/@8y_u_aeZTP2uj_P7dsoqLA/r1WmhjpLF
 
 #### Posts
 | Property | Type | Description |
----------------------------------
+| ---------- | ------ | -------------- |
 | objectId | String | self id of the object |
 | author | String | author of the post, must be an existing user |
 | image | File | Image added to the post |
