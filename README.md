@@ -133,9 +133,16 @@ HackMD Link:
 https://hackmd.io/@8y_u_aeZTP2uj_P7dsoqLA/r1WmhjpLF
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+#### Posts
+| Property | Type | Description |
+---------------------------------
+| objectId | String | self id of the object |
+| author | String | author of the post, must be an existing user |
+| image | File | Image added to the post |
+| createdAt | DateTime | created time of the post |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
