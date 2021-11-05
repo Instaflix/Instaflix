@@ -166,6 +166,25 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
 | movieTrailer | String | official api movie trailer link |
 
 ### Networking
-- [Add list of network requests by screen ]
+
+* Account log in/sign up
+   * (Create/POST) Creation of the account.
+   * (Read/GET) Authentication process for sign in.
+* Account Settings
+   * (Update/POST) Update information of the user.
+   * (Delete) Delete user account.
+* Home
+   * (Read/GET) Retrieve movie posters, movie title, and movie ids. 
+* Favorites
+   * (Read/GET) Retrieve movie posters, movie title, and movie ids. 
+   * (Create/POST) create new entry for user's favorite list.
+   * (Delete) delete/remove entry from user's favorite list.
+* Search
+   * (Read/POST) Retrieve list of movies based on search result
+   * (Read/GET) Retrieve movie posters, movie title, and movie ids.
+* Movie Display
+   * (Read/GET) Retrieve movie posters, movie title, movie background, movie sypnosis, and movie ids.
+   * (Read/GET) Retrieve movie trailer.
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
