@@ -180,6 +180,18 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
 
 ### Networking
 
+* App Delegate connect apis:
+```
+// Parse Connection API 
+let configuration = ParseClientConfiguration {
+    $0.applicationId = "1aj9xzO1QdtzVl1snnZngTBBouoBKOf9AN6dUGG2"
+    $0.clientKey = "v3hVzdztxTQonHIjJhANEGNG0fDCvBGwswxnnihQ"
+    $0.server = "https://parseapi.back4app.com"
+}
+Parse.initialize(with: configuration)
+
+```
+
 * Account log in/sign up
    * (Create/POST) Creation of the account.
    * (Read/GET) Authentication process for sign in.
@@ -197,7 +209,45 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
    * (Read/GET) Retrieve movie posters, movie title, and movie ids.
 * Movie Display
    * (Read/GET) Retrieve movie posters, movie title, movie background, movie sypnosis, and movie ids.
-   * (Read/GET) Retrieve movie trailer.
+    ```
+   //seems useful to have: credits to George Kye (https://github.com/gkye/TheMovieDatabaseSwiftWrapper/)
+   //Movie Title and information
+   MovieMDB.movie(apikey, movieID: 7984, language: "en"){
+      apiReturn, movie in
+      if let movie = movie{
+        print(movie.title)
+        print(movie.revenue)
+        print(movie.genres[0].name)
+        print(movie.production_companies?[0].name)
+      }
+    }
 
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+   ```
+   ```
+    //Movie Posters
+    MovieMDB.images(apikey, movieID: 871, language: "en"){
+      data, imgs in
+      if let images = imgs{
+        print(images.posters[0].file_path)
+        //Backdrop & stills might return `nil`
+        // print(images.stills[0].file_path)
+        //print(images.backdrops[0].file_path)
+      }
+    }
+
+   ```
+   * (Read/GET) Retrieve movie trailer.
+   ```
+   //Movie Trailers
+   MovieMDB.videos(apikey, movieID: 607, language: "en"){
+      apiReturn, videos in
+      if let videos = videos{
+        for i in videos {
+          //    print(i.site)
+          print(i.key)
+          print(i.name)
+        }
+      }
+    }
+
+   ```
