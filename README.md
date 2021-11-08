@@ -141,9 +141,11 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
 | Property | Type | Description |
 | ---------- | ------ | -------------- |
 | objectId | String | self id of the object |
-| author | String | author of the post, must be an existing user |
+| author | String | author of the post, must be an existing user, objectId of user |
+| text | String | text of the post |
 | image? | File | Image added to the post |
 | createdAt | DateTime | created time of the post |
+| comment | Array | comments associated with the post | 
 
 #### User
 | Property | Type | Description |
@@ -159,11 +161,22 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
 | Property | Type | Description |
 | ---------- | ------ | -------------- |
 | objectId | String | self id of the object |
+| user | String | objectId of user |
 | movieId | String | official api movie id |
 | moviePoster | String | official api movie poster link |
 | movieSypnosis | String | official api movie sypnosis link |
 | movieBackground | String | official api movie background link |
 | movieTrailer | String | official api movie trailer link |
+
+#### Comments
+| Property | Type | Description |
+| ---------- | ------ | -------------- |
+| objectId | String | self id of the object |
+| author | String | author of the comment, must be an existing user, objectId of user |
+| text | String | text of the post |
+| image? | File | Image added to the post |
+| createdAt | DateTime | created time of the post |
+| post | String | post associated with the current comment | 
 
 ### Networking
 
