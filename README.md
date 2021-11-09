@@ -163,10 +163,10 @@ Note: the ? in the name stands for nil/null properties. That it can be null.
 | objectId | String | self id of the object |
 | user | String | objectId of user |
 | movieId | String | official api movie id |
-| moviePoster | String | official api movie poster link |
-| movieSypnosis | String | official api movie sypnosis link |
-| movieBackground | String | official api movie background link |
-| movieTrailer | String | official api movie trailer link |
+| poster | String | official api movie poster link |
+| synopsis | String | official api movie sypnosis link |
+| background | String | official api movie background link |
+| trailer | String | official api movie trailer link |
 
 #### Comments
 | Property | Type | Description |
