@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="INSTAFLIX_NoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="S7u-KM-uR8">
-                                <rect key="frame" x="87" y="199" width="240" height="240"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-H0-1AG">
                                 <rect key="frame" x="51" y="444" width="112" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -32,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y38-Sp-EKs">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y38-Sp-EKs">
                                 <rect key="frame" x="51" y="490" width="308" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,6 +48,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" name="Color 1"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6l-Di-ifH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-fd-HF1">
                                 <rect key="frame" x="280" y="666" width="70" height="36"/>
@@ -58,30 +58,36 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" name="Color 1"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZ3-Ax-T2Y"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="INSTAFLIX_NoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="S7u-KM-uR8">
+                                <rect key="frame" x="51" y="127" width="299" height="286"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S7u-KM-uR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="155" id="6fB-8G-aFz"/>
+                            <constraint firstItem="S7u-KM-uR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="6fB-8G-aFz"/>
                             <constraint firstItem="Sg2-aA-mbc" firstAttribute="top" secondItem="Uaa-dj-rEK" secondAttribute="bottom" constant="14" id="BWr-uz-dzJ"/>
                             <constraint firstItem="YKU-H0-1AG" firstAttribute="leading" secondItem="Uaa-dj-rEK" secondAttribute="leading" id="CA4-j5-kfA"/>
-                            <constraint firstItem="YKU-H0-1AG" firstAttribute="top" secondItem="S7u-KM-uR8" secondAttribute="bottom" constant="5" id="DRM-7L-xcO"/>
+                            <constraint firstItem="YKU-H0-1AG" firstAttribute="top" secondItem="S7u-KM-uR8" secondAttribute="bottom" constant="31" id="DRM-7L-xcO"/>
                             <constraint firstItem="Sg2-aA-mbc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="DTV-Ve-oB7"/>
                             <constraint firstItem="DCH-fd-HF1" firstAttribute="top" secondItem="Uaa-dj-rEK" secondAttribute="bottom" constant="24" id="Gh1-hM-XwO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sg2-aA-mbc" secondAttribute="bottom" constant="160" id="HiK-ze-zTC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uZ4-aG-rEq" secondAttribute="trailing" constant="257" id="IVJ-wz-IDG"/>
-                            <constraint firstItem="S7u-KM-uR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="JnO-Lz-3EX"/>
+                            <constraint firstItem="S7u-KM-uR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="JnO-Lz-3EX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DCH-fd-HF1" secondAttribute="trailing" constant="64" id="MZI-fW-mlH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DCH-fd-HF1" secondAttribute="bottom" constant="160" id="Nsc-Tt-JlU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7u-KM-uR8" secondAttribute="trailing" constant="87" id="OtY-kx-Z5E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7u-KM-uR8" secondAttribute="trailing" constant="64" id="OtY-kx-Z5E"/>
                             <constraint firstItem="YKU-H0-1AG" firstAttribute="leading" secondItem="y38-Sp-EKs" secondAttribute="leading" id="VSV-Cv-9Wu"/>
                             <constraint firstItem="DCH-fd-HF1" firstAttribute="leading" secondItem="Sg2-aA-mbc" secondAttribute="trailing" constant="150" id="VtZ-5T-ikF"/>
                             <constraint firstItem="Uaa-dj-rEK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="Y2s-gX-dYC"/>
                             <constraint firstItem="uZ4-aG-rEq" firstAttribute="top" secondItem="y38-Sp-EKs" secondAttribute="bottom" constant="29" id="bVl-Or-IxT"/>
                             <constraint firstItem="uZ4-aG-rEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="f0h-3O-fyL"/>
                             <constraint firstItem="YKU-H0-1AG" firstAttribute="leading" secondItem="uZ4-aG-rEq" secondAttribute="leading" id="fkA-TE-fbB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7u-KM-uR8" secondAttribute="bottom" constant="423" id="gU0-dr-1vF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7u-KM-uR8" secondAttribute="bottom" constant="449" id="gU0-dr-1vF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uaa-dj-rEK" secondAttribute="trailing" constant="55" id="ga1-1Z-VKa"/>
                             <constraint firstItem="y38-Sp-EKs" firstAttribute="top" secondItem="YKU-H0-1AG" secondAttribute="bottom" constant="17" id="hXm-iP-p5d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YKU-H0-1AG" secondAttribute="trailing" constant="251" id="kxf-zk-yqf"/>
@@ -91,6 +97,10 @@
                             <constraint firstItem="YKU-H0-1AG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="upF-2D-eSq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Uaa-dj-rEK" id="vNy-qh-H03"/>
+                        <outlet property="usernameTextField" destination="y38-Sp-EKs" id="o9j-HC-oNy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
