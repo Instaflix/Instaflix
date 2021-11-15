@@ -26,10 +26,10 @@ Social iOS app that makes communication easier with other users regarding on the
 
 **Required Must-have Stories**
 
-- [ ] As a user, I should be able to remain logged in across restarts.
-- [ ] As a new user, I should be able to create a new account for Instaflix.
-- [ ] As a user, I should be able to sign in into my account and view the home page.
-- [ ] As a user, I should be able to sign out from my account and return to the login page.
+- [X] As a user, I should be able to remain logged in across restarts.
+- [X] As a new user, I should be able to create a new account for Instaflix.
+- [X] As a user, I should be able to sign in into my account and view the home page.
+- [X] As a user, I should be able to sign out from my account and return to the login page.
 - [ ] As a user, I should be able to view movies in an organized fashion.
 - [ ] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
 - [ ] As a user, I should be able to comment about the movies.
