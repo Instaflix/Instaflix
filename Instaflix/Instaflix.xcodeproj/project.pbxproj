@@ -15,6 +15,7 @@
 		65A2E80B273C6C4E00DA2AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A2E80A273C6C4E00DA2AA0 /* Assets.xcassets */; };
 		65A2E80E273C6C4E00DA2AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A2E80C273C6C4E00DA2AA0 /* LaunchScreen.storyboard */; };
 		7E115D11F8AEBA311F4CF6FC /* Pods_Instaflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD256AC6CC42E96C3B06F022 /* Pods_Instaflix.framework */; };
+		8B5CEB682741E26D00E904C1 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CEB672741E26C00E904C1 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		65A2E80D273C6C4E00DA2AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A2E80F273C6C4E00DA2AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		819C7FB8AC20F161262FB618 /* Pods-Instaflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instaflix.release.xcconfig"; path = "Target Support Files/Pods-Instaflix/Pods-Instaflix.release.xcconfig"; sourceTree = "<group>"; };
+		8B5CEB672741E26C00E904C1 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		DD256AC6CC42E96C3B06F022 /* Pods_Instaflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instaflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				65A2E80C273C6C4E00DA2AA0 /* LaunchScreen.storyboard */,
 				65A2E80F273C6C4E00DA2AA0 /* Info.plist */,
 				658F660B273DA62E00C6B54B /* LoginViewController.swift */,
+				8B5CEB672741E26C00E904C1 /* HomeTableViewController.swift */,
 			);
 			path = Instaflix;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				65A2E806273C6C3600DA2AA0 /* ViewController.swift in Sources */,
 				65A2E802273C6C3600DA2AA0 /* AppDelegate.swift in Sources */,
 				65A2E804273C6C3600DA2AA0 /* SceneDelegate.swift in Sources */,
+				8B5CEB682741E26D00E904C1 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
