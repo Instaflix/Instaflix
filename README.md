@@ -252,5 +252,4 @@ Parse.initialize(with: configuration)
 
    ```
 ### Sprint 1
-Gif Demo
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Login%2C%20StayLoggedIn%20and%20Logout%20Stories.gif" width="172" height="360">
