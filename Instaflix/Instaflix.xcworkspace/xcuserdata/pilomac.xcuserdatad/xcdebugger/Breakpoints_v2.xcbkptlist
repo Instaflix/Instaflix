@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D73F887D-F9B4-4547-AFEE-9824D386B4CD"
+            uuid = "6249B71B-77F0-4E97-86B3-4B487F6B3CE7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instaflix/MovieViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "MovieViewController"
             landmarkType = "3">
          </BreakpointContent>

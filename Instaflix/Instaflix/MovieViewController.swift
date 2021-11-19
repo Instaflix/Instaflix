@@ -10,8 +10,7 @@ import Parse
 import AlamofireImage
 import MessageInputBar
 
-class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +21,79 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedPost: PFObject!
     
     var refreshControl: UIRefreshControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //commentBar setups (MessageInputBar)
+        commentBar.inputTextView.placeholder = "Add a comment.."
+        commentBar.sendButton.title = "Post"
+        commentBar.delegate = self
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        //CommentBar Display?
+        tableView.keyboardDismissMode = .interactive
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    //MessageInputBar object and functions
+    @objc func keyboardWillBeHidden(note: Notification) {
+        commentBar.inputTextView.text = nil
+        showCommentBar = false
+        becomeFirstResponder()
+    }
+    
+    override var inputAccessoryView: UIView? {
+        return commentBar
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return showCommentBar
+    }
+    //end of MessageInputBar object and functions
+    
+    //this is for the posts limits.. so instead this will be to be modified in the future for query of the comments displayed.
+    
+    //quick comment: change post author for current movie with a comment (associate movies with comments)
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className: "Posts")
+        query.includeKeys(["author", "comments", "comments.author"])
+        query.limit = 20
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
+        }
+    }
+     */
+    
+    
+    //not sure what this one is for but it looks like related to comments, or it is the number of rows?
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        let post = posts[section]
+        let comments = (post["comments"] as? [PFObject]) ?? []
+        
+        return comments.count + 2
+        
+    }
+    
+    
+    //handles number of sections (1 section contains 1 movie cell, 1 comment cell (x comments), 1 add comment cell)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //original return was posts.count
+        return 1
+    }
     
     //handles display of the cells, row 0 is always movie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,30 +136,6 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             selectedPost = post
         }
         
-    }
-    
-//EVERYTHING BELOW IS GENERATED
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
     }
 
 }
