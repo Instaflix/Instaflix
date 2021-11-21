@@ -11,6 +11,8 @@ import AlamofireImage
 
 class HomeTableViewController: UITableViewController {
     
+    var selectedMovieID: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +48,18 @@ class HomeTableViewController: UITableViewController {
         return 0
     }
 
+    //delete the button and keep this code and the segue?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MovieViewController {
+            let vc = segue.destination as? MovieViewController
+            vc?.movieID = selectedMovieID
+        }
+    }
     
-
+    @IBAction func testMovieDisplay(_ sender: Any) {
+        selectedMovieID = 550
+        self.performSegue(withIdentifier: "homeToMovie", sender: self)
+        
+    }
+    
 }

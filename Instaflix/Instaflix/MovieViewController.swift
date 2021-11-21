@@ -16,10 +16,10 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     //movieId from previous screen
-    var movieID = UserDefaults.standard.integer(forKey: "movieID")
+    var movieID: Int? //doesn't run so do segue way
     
     //dangerous practice for apikeys
-    let TMDBapikey = "34872395426d9e0ba548d1d51cbd6c10"
+    //let TMDBapikey = "34872395426d9e0ba548d1d51cbd6c10"
     
     let commentBar = MessageInputBar()
     var showCommentBar = false
@@ -88,10 +88,11 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //not sure what this one is for but it looks like related to comments, or it is the number of rows?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        /*
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        
-        return comments.count + 2
+        */
+        return 3
         
     }
     
@@ -105,32 +106,46 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //handles display of the cells, row 0 is always movie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.section]
-        let comments = (post["comments"] as? [PFObject]) ?? []
+        //let post = posts[indexPath.section]
+        //let comments = (post["comments"] as? [PFObject]) ?? []
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
             
-            var data: [MovieMDB]!
+            print(movieID)
+            
             
             //a MovieMDB object's items? are mostly String type except movieID being INT
             //use movieId passed through Segue
             MovieMDB.movie(movieID: self.movieID, language: "en") { (api, movie) in
                 cell.title.text = movie?.title
                 cell.synopsis.text = movie?.overview
+                
+                let posterPath = movie?.poster_path as String?
+                let baseURL =  "https://image.tmdb.org/t/p/w185"
+                
+                let url = URL(string: baseURL + posterPath!)
+                cell.poster.af.setImage(withURL: url!)
             }
             
-            MovieMDB.images(movieID: self.movieID, language: "en") { (api, imgs) in
-                if let images = imgs {
-                    let imageURL = images.posters[0].file_path!
-                    let url = URL(string: imageURL)!
-                    cell.poster.af.setImage(withURL: url)
-                }
-            }
+            return cell
+        }
+        else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             
             
             return cell
         }
+        else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell") as! AddCommentCell
+            
+            
+            return cell
+            
+        }
+        /*
         else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             
@@ -143,10 +158,12 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             return cell
         }
+         */
         
     }
     
     //Comment section backend template/setup for comment bar posting
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.section] //video is .row, but that changed
         let comments = (post["comments"] as? [PFObject]) ?? []
@@ -160,5 +177,11 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
     }
+     */
+    
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }

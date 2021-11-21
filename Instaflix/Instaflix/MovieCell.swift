@@ -18,6 +18,7 @@ class MovieCell: UITableViewCell {
     
     @IBOutlet weak var synopsis: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

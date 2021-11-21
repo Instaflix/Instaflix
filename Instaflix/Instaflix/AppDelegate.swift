@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import TMDBSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
-
-
+        
+        TMDBConfig.apikey = "34872395426d9e0ba548d1d51cbd6c10"
         
         return true
     }
