@@ -9,4 +9,5 @@ target 'Instaflix' do
   pod 'AlamofireImage'
   pod 'Parse'
   pod 'MessageInputBar'
+  pod 'TMDBSwift'
 end
