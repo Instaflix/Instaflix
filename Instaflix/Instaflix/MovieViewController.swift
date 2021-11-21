@@ -9,10 +9,17 @@ import UIKit
 import Parse
 import AlamofireImage
 import MessageInputBar
+import TMDBSwift
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    //movieId from previous screen
+    var movieID = UserDefaults.standard.integer(forKey: "movieID")
+    
+    //dangerous practice for apikeys
+    let TMDBapikey = "34872395426d9e0ba548d1d51cbd6c10"
     
     let commentBar = MessageInputBar()
     var showCommentBar = false
@@ -104,6 +111,22 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
             
+            var data: [MovieMDB]!
+            
+            //a MovieMDB object's items? are mostly String type except movieID being INT
+            //use movieId passed through Segue
+            MovieMDB.movie(movieID: self.movieID, language: "en") { (api, movie) in
+                cell.title.text = movie?.title
+                cell.synopsis.text = movie?.overview
+            }
+            
+            MovieMDB.images(movieID: self.movieID, language: "en") { (api, imgs) in
+                if let images = imgs {
+                    let imageURL = images.posters[0].file_path!
+                    let url = URL(string: imageURL)!
+                    cell.poster.af.setImage(withURL: url)
+                }
+            }
             
             
             return cell
