@@ -17,6 +17,11 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //movieId from previous screen
     var movieID: Int? //doesn't run so do segue way
+    var movie: MovieMDB!
+    
+    @IBOutlet weak var backDropView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
     
     //dangerous practice for apikeys
     //let TMDBapikey = "34872395426d9e0ba548d1d51cbd6c10"
@@ -32,19 +37,30 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //commentBar setups (MessageInputBar)
-        commentBar.inputTextView.placeholder = "Add a comment.."
-        commentBar.sendButton.title = "Post"
-        commentBar.delegate = self
+        print("=====> ", movie.title)
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        titleLabel.text = movie.title
+        synopsisLabel.text = movie.overview
+
+        let posterPath = movie.poster_path as String?
+        let baseURL =  "https://image.tmdb.org/t/p/w780"
+        let url = URL(string: baseURL + posterPath!)
+        backDropView.af_setImage(withURL: url!)
         
-        //CommentBar Display?
-        tableView.keyboardDismissMode = .interactive
         
-        let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        //commentBar setups (MessageInputBar)
+//        commentBar.inputTextView.placeholder = "Add a comment.."
+//        commentBar.sendButton.title = "Post"
+//        commentBar.delegate = self
+//        
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//        
+//        //CommentBar Display?
+//        tableView.keyboardDismissMode = .interactive
+//        
+//        let center = NotificationCenter.default
+//        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
@@ -112,7 +128,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
             
-            print(movieID)
+            //print(movieID)
             
             
             //a MovieMDB object's items? are mostly String type except movieID being INT
@@ -125,7 +141,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let baseURL =  "https://image.tmdb.org/t/p/w185"
                 
                 let url = URL(string: baseURL + posterPath!)
-                cell.poster.af.setImage(withURL: url!)
+                cell.posterImage.af.setImage(withURL: url!)
             }
             
             return cell
@@ -179,9 +195,8 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
      */
     
+    
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
-
 }
