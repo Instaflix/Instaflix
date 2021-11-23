@@ -34,7 +34,7 @@ Social iOS app that makes communication easier with other users regarding on the
 - [ ] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
 - [ ] As a user, I should be able to comment about the movies.
 - [ ] As a user, I should watch movie trailers of the chosen movie so I learn more about it.
-- [ ] As a developer, I want to store movie trailer data, movie poster data, movie title data, movie description data for the display movie screen.
+- [x] As a developer, I want to store movie trailer data, movie poster data, movie title data, movie description data for the display movie screen.
 - [ ] As a developer, I want to link user accounts with comments displayed in the display movie screen.
 
 
