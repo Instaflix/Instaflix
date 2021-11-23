@@ -30,7 +30,7 @@ Social iOS app that makes communication easier with other users regarding on the
 - [X] As a new user, I should be able to create a new account for Instaflix.
 - [X] As a user, I should be able to sign in into my account and view the home page.
 - [X] As a user, I should be able to sign out from my account and return to the login page.
-- [ ] As a user, I should be able to view movies in an organized fashion.
+- [x] As a user, I should be able to view movies in an organized fashion.
 - [ ] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
 - [ ] As a user, I should be able to comment about the movies.
 - [ ] As a user, I should watch movie trailers of the chosen movie so I learn more about it.
@@ -253,3 +253,6 @@ Parse.initialize(with: configuration)
    ```
 ### Sprint 1
 <img src="https://github.com/Instaflix/Instaflix/blob/main/Login%2C%20StayLoggedIn%20and%20Logout%20Stories.gif" width="172" height="360">
+
+### Sprint 2
+<img src="https://github.com/Instaflix/Instaflix/blob/main/sprint2Demo.gif" width="172" height="360">
