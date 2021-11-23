@@ -2,7 +2,7 @@
 //  MovieCell.swift
 //  Instaflix
 //
-//  Created by Edgar Bermudez on 11/19/21.
+//  Created by Edgar Bermudez and Ciara Morell on 11/19/21.
 //
 
 import UIKit
@@ -12,12 +12,13 @@ import Parse
 class MovieCell: UITableViewCell {
 
     
-    @IBOutlet weak var poster: UIImageView!
+    //@IBOutlet weak var poster: UIImageView!
     
     @IBOutlet weak var title: UILabel!
-    
+
     @IBOutlet weak var synopsis: UILabel!
     
+    @IBOutlet weak var posterImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

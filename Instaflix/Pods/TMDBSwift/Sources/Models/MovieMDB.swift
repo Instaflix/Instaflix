@@ -20,7 +20,7 @@ extension MovieMDB{
   
   ///Get the basic movie information for a specific movie id.
   public class func movie(movieID: Int!, language: String? = nil , completion: @escaping (_ clientReturn: ClientReturn, _ data: MovieDetailedMDB?) -> ()) -> (){
-    Client.Movies(String(movieID),  page: nil, language: language){
+      Client.Movies(String(movieID),  page: nil, language: language){
       apiReturn in
       var detailed: MovieDetailedMDB?
       if let json = apiReturn.json {
