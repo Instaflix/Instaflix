@@ -22,6 +22,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var backDropView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var posterView: UIImageView!
     
     //dangerous practice for apikeys
     //let TMDBapikey = "34872395426d9e0ba548d1d51cbd6c10"
@@ -43,9 +44,16 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         synopsisLabel.text = movie.overview
 
         let posterPath = movie.poster_path as String?
+        let backdropPath = movie.backdrop_path as String?
         let baseURL =  "https://image.tmdb.org/t/p/w780"
-        let url = URL(string: baseURL + posterPath!)
-        backDropView.af_setImage(withURL: url!)
+
+        let posterUrl = URL(string: baseURL + posterPath!)
+        let backdropUrl = URL(string: baseURL + posterPath!)
+        
+        
+        backDropView.af.setImage(withURL: backdropUrl!)
+        posterView.af.setImage(withURL: posterUrl!)
+        
         
         
 //        //commentBar setups (MessageInputBar)
