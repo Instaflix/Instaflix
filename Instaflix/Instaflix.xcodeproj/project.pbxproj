@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		653130F3274487B300FD6F31 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653130F2274487B300FD6F31 /* MovieViewController.swift */; };
+		655ED318274DA2C300A0D515 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655ED317274DA2C300A0D515 /* CommentViewController.swift */; };
 		658F660C273DA62E00C6B54B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F660B273DA62E00C6B54B /* LoginViewController.swift */; };
 		65A2E802273C6C3600DA2AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2E801273C6C3600DA2AA0 /* AppDelegate.swift */; };
 		65A2E804273C6C3600DA2AA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A2E803273C6C3600DA2AA0 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		04BCD6162925122542B8CB29 /* Pods-Instaflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instaflix.debug.xcconfig"; path = "Target Support Files/Pods-Instaflix/Pods-Instaflix.debug.xcconfig"; sourceTree = "<group>"; };
 		653130F2274487B300FD6F31 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		655ED317274DA2C300A0D515 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		658F660B273DA62E00C6B54B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65A2E7FE273C6C3600DA2AA0 /* Instaflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A2E801273C6C3600DA2AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				65FAC58227482D950021A394 /* MovieCell.swift */,
 				65FAC58527482E490021A394 /* CommentCell.swift */,
 				65FAC58827482E720021A394 /* AddCommentCell.swift */,
+				655ED317274DA2C300A0D515 /* CommentViewController.swift */,
 			);
 			path = Instaflix;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655ED318274DA2C300A0D515 /* CommentViewController.swift in Sources */,
 				65FAC58927482E720021A394 /* AddCommentCell.swift in Sources */,
 				65FAC58327482D950021A394 /* MovieCell.swift in Sources */,
 				658F660C273DA62E00C6B54B /* LoginViewController.swift in Sources */,
