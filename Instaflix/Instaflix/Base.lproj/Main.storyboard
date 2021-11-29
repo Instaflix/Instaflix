@@ -255,6 +255,7 @@
                                             <outlet property="posterImage" destination="fyd-KX-9Rx" id="cis-pJ-iJh"/>
                                             <outlet property="synopsis" destination="bef-dT-nrS" id="zgW-Ly-6gJ"/>
                                             <outlet property="title" destination="UXM-lr-eig" id="bgM-ZB-Rf3"/>
+                                            <segue destination="PKb-sO-pRs" kind="show" id="OW0-Nm-Bpg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -281,7 +282,6 @@
                     <connections>
                         <outlet property="searchbar" destination="h8l-HT-g6P" id="rvc-XG-3Fm"/>
                         <outlet property="tableview" destination="kSz-Z0-hrP" id="6V1-13-Pfh"/>
-                        <segue destination="PKb-sO-pRs" kind="show" identifier="searchToMovie" id="zKd-5u-SRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sco-aW-Vz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -453,7 +453,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zKd-5u-SRR"/>
+        <segue reference="OW0-Nm-Bpg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color 1"/>
     <resources>
