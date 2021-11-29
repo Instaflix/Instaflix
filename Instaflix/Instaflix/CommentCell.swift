@@ -14,10 +14,8 @@ class CommentCell: UITableViewCell {
     
     @IBOutlet weak var profile: UIImageView!
     
-    @IBOutlet weak var username: UILabel!
-    
-
-    @IBOutlet weak var userText: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
