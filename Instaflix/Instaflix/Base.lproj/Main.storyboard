@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -117,7 +118,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="182" id="wCt-lG-tEE" customClass="MovieCell" customModule="Instaflix" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="182"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="182"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wCt-lG-tEE" id="15Y-cM-CGn">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
@@ -250,7 +251,6 @@
         <!--Comment View Controller-->
         <scene sceneID="Gma-mA-jb3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfr-rM-c2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="2Fd-KS-3V4" userLabel="Comment View Controller" customClass="CommentViewController" customModule="Instaflix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AwE-lW-uP6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
@@ -261,81 +261,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="225" id="0dk-yk-bUo" userLabel="Comment Cell" customClass="CommentCell" customModule="Instaflix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="225"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="46" id="0dk-yk-bUo" userLabel="Comment Cell" customClass="CommentCell" customModule="Instaflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0dk-yk-bUo" id="M1H-Ps-hye">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yil-dX-apf">
-                                                    <rect key="frame" x="110" y="36.333333333333336" width="86" height="21.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yil-dX-apf">
+                                                    <rect key="frame" x="20" y="0.0" width="86" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtZ-br-lwf" userLabel="comment">
-                                                    <rect key="frame" x="30.000000000000007" y="105" width="74.666666666666686" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="CVx-wZ-MGH"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtZ-br-lwf" userLabel="comment">
+                                                    <rect key="frame" x="164" y="0.0" width="230" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="8uW-lc-sWT" userLabel="profile">
-                                                    <rect key="frame" x="20" y="10" width="82" height="74"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="Dl5-AA-bfW"/>
-                                                        <constraint firstAttribute="width" constant="82" id="JBz-pf-csE"/>
-                                                        <constraint firstAttribute="height" constant="74" id="ZVD-bN-bZt"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8uW-lc-sWT" firstAttribute="leading" secondItem="M1H-Ps-hye" secondAttribute="leadingMargin" id="3Jv-Ox-8VU"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WtZ-br-lwf" secondAttribute="trailing" constant="20" symbolic="YES" id="3hH-Er-Jiv"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="WtZ-br-lwf" secondAttribute="bottom" constant="65" id="5zc-MD-j6W"/>
-                                                <constraint firstItem="yil-dX-apf" firstAttribute="leading" secondItem="8uW-lc-sWT" secondAttribute="trailing" constant="8" id="8Wu-Zy-BIU"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yil-dX-apf" secondAttribute="trailing" constant="20" symbolic="YES" id="FHs-eh-ImH"/>
-                                                <constraint firstItem="WtZ-br-lwf" firstAttribute="top" secondItem="8uW-lc-sWT" secondAttribute="bottom" constant="21" id="Mtb-xm-0js"/>
-                                                <constraint firstItem="8uW-lc-sWT" firstAttribute="centerY" secondItem="yil-dX-apf" secondAttribute="centerY" id="Oqn-wd-MmL"/>
-                                                <constraint firstItem="WtZ-br-lwf" firstAttribute="leading" secondItem="M1H-Ps-hye" secondAttribute="leadingMargin" constant="10" id="RuV-Zm-nWL"/>
-                                                <constraint firstItem="8uW-lc-sWT" firstAttribute="top" secondItem="M1H-Ps-hye" secondAttribute="topMargin" constant="-1" id="oZO-EA-n1b"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="profile" destination="8uW-lc-sWT" id="alf-CG-abw"/>
-                                            <outlet property="userText" destination="WtZ-br-lwf" id="8kE-rP-nid"/>
-                                            <outlet property="username" destination="yil-dX-apf" id="WON-Lb-N8m"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" rowHeight="62" id="PnJ-Yb-X59" userLabel="AddComment Cell" customClass="AddCommentCell" customModule="Instaflix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="253" width="414" height="62"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PnJ-Yb-X59" id="4dx-P1-aEG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVx-Dd-3my">
-                                                    <rect key="frame" x="31" y="0.0" width="363" height="51"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="363" id="pp3-Ds-L5o"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <color key="textColor" systemColor="systemGray3Color"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rVx-Dd-3my" firstAttribute="top" secondItem="4dx-P1-aEG" secondAttribute="top" id="Wia-vE-jSX"/>
-                                                <constraint firstItem="rVx-Dd-3my" firstAttribute="bottom" secondItem="4dx-P1-aEG" secondAttribute="bottomMargin" id="cAd-9a-48Y"/>
-                                                <constraint firstItem="rVx-Dd-3my" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4dx-P1-aEG" secondAttribute="leading" constant="20" symbolic="YES" id="p0q-g3-0bb"/>
-                                                <constraint firstItem="rVx-Dd-3my" firstAttribute="trailing" secondItem="4dx-P1-aEG" secondAttribute="trailingMargin" id="sXq-bq-nA2"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="userNewText" destination="rVx-Dd-3my" id="OjT-HI-zOH"/>
+                                            <outlet property="commentLabel" destination="WtZ-br-lwf" id="pT8-jI-ZkB"/>
+                                            <outlet property="usernameLabel" destination="yil-dX-apf" id="eeB-fj-0VB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -349,6 +300,7 @@
                         <outlet property="tableView" destination="lfe-Aw-Uqk" id="14C-R9-tbt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfr-rM-c2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1279.7101449275362" y="1655.7065217391305"/>
         </scene>
@@ -356,7 +308,6 @@
     <color key="tintColor" name="Color 1"/>
     <resources>
         <image name="INSTAFLIX_NoBackground" width="200" height="200"/>
-        <image name="profile-Icon" width="26" height="26"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -368,9 +319,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
