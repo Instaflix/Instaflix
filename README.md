@@ -31,11 +31,11 @@ Social iOS app that makes communication easier with other users regarding on the
 - [X] As a user, I should be able to sign in into my account and view the home page.
 - [X] As a user, I should be able to sign out from my account and return to the login page.
 - [x] As a user, I should be able to view movies in an organized fashion.
-- [ ] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
-- [ ] As a user, I should be able to comment about the movies.
+- [X] As a user, I should be able to search movies using a search bar so that finding movies becomes easier.
+- [X] As a user, I should be able to comment about the movies.
 - [ ] As a user, I should watch movie trailers of the chosen movie so I learn more about it.
 - [x] As a developer, I want to store movie trailer data, movie poster data, movie title data, movie description data for the display movie screen.
-- [ ] As a developer, I want to link user accounts with comments displayed in the display movie screen.
+- [X] As a developer, I want to link user accounts with comments displayed in the display movie screen.
 
 
 **Optional Nice-to-have Stories**
