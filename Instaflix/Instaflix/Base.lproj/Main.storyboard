@@ -159,6 +159,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="nHY-er-09F">
+                        <barButtonItem key="leftBarButtonItem" title="search" image="magnifyingglass" catalog="system" id="1hG-EC-7Kv">
+                            <connections>
+                                <action selector="searchViewButton:" destination="aga-In-ddc" id="eyp-Vc-H0n"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout " id="2E9-cI-JXD">
                             <color key="tintColor" name="Color 1"/>
                             <connections>
@@ -168,6 +173,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3kk-h3-kDc" id="0JF-De-E8z"/>
+                        <segue destination="itp-ut-uJg" kind="show" identifier="homeToSearch" id="DLc-FG-1fA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pa-mh-n1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,6 +195,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNn-ds-QD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="503" y="76"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="tkI-ge-j0S">
+            <objects>
+                <viewController id="itp-ut-uJg" customClass="SearchViewController" customModule="Instaflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPV-Pj-zxV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kSz-Z0-hrP">
+                                <rect key="frame" x="0.0" y="103" width="414" height="613"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="274" id="LLy-lZ-fY3" customClass="MovieCell" customModule="Instaflix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="274"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LLy-lZ-fY3" id="yKp-bc-Lt9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="274"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-lr-eig">
+                                                    <rect key="frame" x="20" y="11" width="374" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="JFN-LB-7Lv"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="xAD-1x-xDo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bef-dT-nrS">
+                                                    <rect key="frame" x="201" y="36" width="193" height="157"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="YIm-eB-N2v"/>
+                                                        <constraint firstAttribute="height" constant="157" id="zNn-2U-HO2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fyd-KX-9Rx">
+                                                    <rect key="frame" x="9" y="47" width="184" height="146"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UXM-lr-eig" firstAttribute="top" secondItem="yKp-bc-Lt9" secondAttribute="topMargin" id="3Sb-7l-0Co"/>
+                                                <constraint firstItem="UXM-lr-eig" firstAttribute="trailing" secondItem="yKp-bc-Lt9" secondAttribute="trailingMargin" id="70d-N1-Buk"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="bef-dT-nrS" secondAttribute="bottom" constant="13" id="Czp-Bb-DQs"/>
+                                                <constraint firstItem="bef-dT-nrS" firstAttribute="leading" secondItem="fyd-KX-9Rx" secondAttribute="trailing" constant="8" symbolic="YES" id="PZr-fc-BmP"/>
+                                                <constraint firstItem="bef-dT-nrS" firstAttribute="top" secondItem="yKp-bc-Lt9" secondAttribute="topMargin" constant="25" id="S5H-Pt-UW0"/>
+                                                <constraint firstItem="bef-dT-nrS" firstAttribute="trailing" secondItem="yKp-bc-Lt9" secondAttribute="trailingMargin" id="WZX-uf-wwR"/>
+                                                <constraint firstItem="UXM-lr-eig" firstAttribute="leading" secondItem="yKp-bc-Lt9" secondAttribute="leadingMargin" id="tUd-0g-DNM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="posterImage" destination="fyd-KX-9Rx" id="cis-pJ-iJh"/>
+                                            <outlet property="synopsis" destination="bef-dT-nrS" id="zgW-Ly-6gJ"/>
+                                            <outlet property="title" destination="UXM-lr-eig" id="bgM-ZB-Rf3"/>
+                                            <segue destination="PKb-sO-pRs" kind="show" id="OW0-Nm-Bpg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type any keyword..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-HT-g6P">
+                                <rect key="frame" x="6" y="61" width="376" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Go-HPw">
+                                <rect key="frame" x="384" y="64" width="25" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="itp-ut-uJg" eventType="touchUpInside" id="pnB-AM-U4U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A85-De-EyG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="dtb-sL-zjT"/>
+                    <connections>
+                        <outlet property="searchbar" destination="h8l-HT-g6P" id="rvc-XG-3Fm"/>
+                        <outlet property="tableview" destination="kSz-Z0-hrP" id="6V1-13-Pfh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sco-aW-Vz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502.89855072463774" y="858.42391304347836"/>
         </scene>
         <!--Movie View Controller-->
         <scene sceneID="hlF-vc-Ctx">
@@ -305,6 +404,9 @@
             <point key="canvasLocation" x="1279.7101449275362" y="1655.7065217391305"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OW0-Nm-Bpg"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Color 1"/>
     <resources>
         <image name="INSTAFLIX_NoBackground" width="200" height="200"/>
