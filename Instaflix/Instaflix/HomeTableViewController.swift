@@ -83,25 +83,29 @@ class HomeTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is MovieViewController {
-            let vc = segue.destination as? MovieViewController
-            vc?.movieID = 550
+            
+            print("====> loading up the details....")
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            
+            let movie = movies[indexPath!.row]
+            
+            let detailsViewController = segue.destination as! MovieViewController
+            detailsViewController.movie = movie
         }
-        print("====> loading up the details....")
         
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)
-        
-        let movie = movies[indexPath!.row]
-        
-        let detailsViewController = segue.destination as! MovieViewController
-        detailsViewController.movie = movie
-        
-        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
     @IBAction func testMovieDisplay(_ sender: Any) {
         selectedMovieID = 550
         self.performSegue(withIdentifier: "homeToMovie", sender: self)
+    }
+    
+    
+    
+    @IBAction func searchViewButton(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "homeToSearch", sender: self)
     }
     
 }
