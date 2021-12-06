@@ -259,3 +259,6 @@ Parse.initialize(with: configuration)
 
 ### Sprint 3
 <img src="https://github.com/Instaflix/Instaflix/blob/main/sprint3Demo.gif" width="172" height="360">
+
+### Sprint 4
+<img src="https://github.com/Instaflix/Instaflix/blob/main/sprint4Demo.gif" width="172" height="360">
